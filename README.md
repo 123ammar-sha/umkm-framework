@@ -25,34 +25,53 @@ Aplikasi katalog produk berbasis web yang dirancang khusus untuk pelaku UMKM. Si
     cd nama-repository
     Install Dependensi PHP
     ```
+2. Install Dependensi PHP
 
-Bash
-composer install
-Konfigurasi Environment
+    ```bash
+    composer install
+    Konfigurasi Environment
+    ```
 
-Bash
-cp .env.example .env
-php artisan key:generate
-Atur koneksi basis data (DB_DATABASE, DB_USERNAME, DB_PASSWORD) di dalam file .env.
+3. Konfigurasi Environment
 
-Migrasi Database & Seeder
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
+    ```
 
-Bash
-php artisan migrate --seed
-Jalankan Server Lokal
+    <i>Atur koneksi basis data (DB_DATABASE, DB_USERNAME, DB_PASSWORD) di dalam file .env.
+    </i>
 
-Bash
-php artisan serve
-Akses aplikasi di peramban melalui alamat http://127.0.0.1:8000.
+4. Migrasi Database & Seeder
 
-📁 Komponen Arsitektur Saat ini
+    ```bash
+    php artisan migrate --seed
+    ```
+
+5. Jalankan Server Lokal
+
+    ```bash
+    php artisan serve
+    Akses aplikasi di peramban melalui alamat http://127.0.0.1:8000.
+    ```
+
+## 📁 Komponen Arsitektur Saat ini
+
+```
 app/Http/Controllers/OrderController.php — Mengelola alur transaksi checkout dan halaman sukses.
+```
 
+```
 app/Http/Requests/OrderRequest.php — Menangani isolasi validasi input transaksi.
+```
 
+```
 app/Models/Order.php — Model data pesanan beserta proteksi atribut $fillable.
+```
 
+```
 resources/views/success.blade.php — Tampilan nota transaksi dan tombol pengalihan WhatsApp.
+```
 
 👤 Penulis
 Ammar Shafiy
