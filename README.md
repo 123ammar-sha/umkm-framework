@@ -72,6 +72,3 @@ app/Models/Order.php — Model data pesanan beserta proteksi atribut $fillable.
 ```
 resources/views/success.blade.php — Tampilan nota transaksi dan tombol pengalihan WhatsApp.
 ```
-
-👤 Penulis
-Ammar Shafiy
